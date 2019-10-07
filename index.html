@@ -28,7 +28,7 @@
 
 function keydown() {
   target = document.getElementById("message");
-  target.innerHTML = "キーが押されました KeyCode :" + event.keyCode;
+  target.innerHTML = "キーが押されました KeyCode :" + event.key;
 }
   </script>
 </head>
@@ -38,7 +38,7 @@ function keydown() {
   <a href="p.html">p.html</a>
 
   <p>
-    メッセージ：<span id="message"></span>
+    メッセージ？：<span id="message"></span>
   </p>
 </body>
 </html>
