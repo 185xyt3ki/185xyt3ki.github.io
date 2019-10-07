@@ -29,30 +29,6 @@
 function keydown() {
   target = document.getElementById("message");
   target.innerHTML = "キーが押されました KeyCode :" + event.keyCode;
-
-  target = document.getElementById("messageShift");
-  if (event.shiftKey == true) {
-    target.innerHTML = "Shiftキーが押されました";
-  }
-  else {
-    target.innerHTML = "";
-  }
-
-  target = document.getElementById("messageCtrl");
-  if (event.ctrlKey == true) {
-    target.innerHTML = "Ctrlキーが押されました";
-  }
-  else {
-    target.innerHTML = "";
-  }
-
-  target = document.getElementById("messageAlt");
-  if (event.altKey == true) {
-    target.innerHTML = "Altlキーが押されました";
-  }
-  else {
-    target.innerHTML = "";
-  }
 }
   </script>
 </head>
@@ -61,10 +37,8 @@ function keydown() {
   <img src="./pwa-logo.svg" alt="PWA logo" class="image" />
   <a href="p.html">p.html</a>
 
-  <div>メッセージ</div>
-  <div id="message"></div>
-  <div id="messageShift"></div>
-  <div id="messageCtrl"></div>
-  <div id="messageAlt"></div>
+  <p>
+    メッセージ：<span id="message"></span>
+  </p>
 </body>
 </html>
