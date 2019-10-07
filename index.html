@@ -24,9 +24,12 @@
   </style>
 
   <script>
-    function sample1getValue() {
-      var $sample1value = document.getElementById( "sample1input" ).value;
-      document.getElementById( "sample1output" ).innerHTML = $sample1value;
+    document.onkeyup = output1example;
+    function output1example() {
+      var target1 = document.getElementById("onkey1");
+      if (event >= 49 && event <= 57) {
+        target1.innerHTML = event.key;
+      }
     }
   </script>
 </head>
@@ -35,7 +38,9 @@
   <img src="./pwa-logo.svg" alt="PWA logo" class="image" />
   <a href="p.html">p.html</a>
 
-  <p><input type="text" id="sample1input" onkeydown="sample1getValue();" /></p>
-  <p>最後に入力した文字以外のテキスト：<span id="sample1output"></span></p>
+  <p>
+    最後に押されたキーボードの数字：
+    <span id="onkey1"></span>
+  </p>
 </body>
 </html>
