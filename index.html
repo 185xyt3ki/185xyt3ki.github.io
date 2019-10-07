@@ -22,10 +22,24 @@
       display: block;
     }
   </style>
+
+  <script>
+    function output1example() {
+      var target1 = document.getElementById("onkey1");
+      if (event <= 49 && event >= 57) {
+        target1.innerHTML = event.key;
+      }
+    }
+  </script>
 </head>
 <body>
   <h1>Hello PWA.</h1>
   <img src="./pwa-logo.svg" alt="PWA logo" class="image" />
   <a href="p.html">p.html</a>
+
+  <p onkeyup="output1example">
+    最後に押されたキーボードの数字：
+    <span id="onkey1"></span>
+  </p>
 </body>
 </html>
