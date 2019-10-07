@@ -24,13 +24,36 @@
   </style>
 
   <script>
-    document.onkeyup = output1example;
-    function output1example() {
-      var target1 = document.getElementById("onkey1");
-      if (event >= 49 && event <= 57) {
-        target1.innerHTML = event.key;
-      }
-    }
+    document.onkeydown = keydown;
+
+function keydown() {
+  target = document.getElementById("message");
+  target.innerHTML = "キーが押されました KeyCode :" + event.keyCode;
+
+  target = document.getElementById("messageShift");
+  if (event.shiftKey == true) {
+    target.innerHTML = "Shiftキーが押されました";
+  }
+  else {
+    target.innerHTML = "";
+  }
+
+  target = document.getElementById("messageCtrl");
+  if (event.ctrlKey == true) {
+    target.innerHTML = "Ctrlキーが押されました";
+  }
+  else {
+    target.innerHTML = "";
+  }
+
+  target = document.getElementById("messageAlt");
+  if (event.altKey == true) {
+    target.innerHTML = "Altlキーが押されました";
+  }
+  else {
+    target.innerHTML = "";
+  }
+}
   </script>
 </head>
 <body>
@@ -38,9 +61,10 @@
   <img src="./pwa-logo.svg" alt="PWA logo" class="image" />
   <a href="p.html">p.html</a>
 
-  <p>
-    最後に押されたキーボードの数字：
-    <span id="onkey1"></span>
-  </p>
+  <div>メッセージ</div>
+  <div id="message"></div>
+  <div id="messageShift"></div>
+  <div id="messageCtrl"></div>
+  <div id="messageAlt"></div>
 </body>
 </html>
